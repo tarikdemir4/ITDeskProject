@@ -1,10 +1,11 @@
 ﻿using ITDesk.WebApi.DTOs;
+using ITDesk.WebApi.Models;
 using ITDesk.WebApi.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITDesk.WebApi.Controllers;
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class AuthController : ControllerBase
 {
@@ -41,5 +42,21 @@ public class AuthController : ControllerBase
 
         PasswordService.CreatePassword(request.Password, out PasswordHash, out PasswordSalt);
         #endregion
+
+        #region User Nesnesi Oluşturma
+
+        User user = new()
+        {
+            Email = request.Email,
+            Name = request.Name,
+            LastName = request.LastName,
+            PasswordHash = PasswordHash,
+            PasswordSalt = PasswordSalt
+
+        };
+
+        #endregion
+
+        return Ok(new { Message="Kullanıcı Kaydı başarıyla tmamalandı " });
     }
 }
