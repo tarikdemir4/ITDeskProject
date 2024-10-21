@@ -1,4 +1,5 @@
-﻿using ITDesk.WebApi.DTOs;
+﻿using FluentValidation;
+using ITDesk.WebApi.DTOs;
 using ITDesk.WebApi.Models;
 using ITDesk.WebApi.Services;
 using Microsoft.AspNetCore.Http;
@@ -9,30 +10,22 @@ namespace ITDesk.WebApi.Controllers;
 [ApiController]
 public class AuthController : ControllerBase
 {
+    private readonly IValidator<RegisterDto> _registerDtoValidator;
+    public AuthController(IValidator<RegisterDto>registerDtorValidator)
+    {
+        _registerDtoValidator = registerDtorValidator;
+    }
     [HttpPost]
     public IActionResult Register(RegisterDto request)
     {
-         #region İş Kuralları
+        #region İş Kuralları
 
-        if (request.Name.Length < 3 || string.IsNullOrWhiteSpace(request.Name))
+        var result = _registerDtoValidator.Validate(request);
+        if (!result.IsValid)
         {
-            throw new ArgumentException("İsim 3 karakterden kısa olamaz");
+            throw new ValidationException(result.Errors[0].ErrorMessage);
         }
 
-        if (request.LastName.Length < 3 || string.IsNullOrWhiteSpace(request.LastName))
-        {
-            throw new ArgumentException("Soyisim 3 karakterden kısa olamaz");
-        }
-
-        if (!request.Email.Contains("@") || string.IsNullOrWhiteSpace(request.Email) || request.Email.Length < 4)
-        {
-            throw new ArgumentException("Geçerli bir mail adresi giriniz");
-        }
-
-        if (request.Password.Length < 1 || string.IsNullOrWhiteSpace(request.Password))
-        {
-            throw new ArgumentException("Şifre 1 karakterden küçük olamaz");
-        }
         #endregion
 
         #region Password Hashleme
@@ -57,6 +50,6 @@ public class AuthController : ControllerBase
 
         #endregion
 
-        return Ok(new { Message="Kullanıcı Kaydı başarıyla tmamalandı " });
+        return Ok(new { Message = "Kullanıcı Kaydı başarıyla tmamalandı " });
     }
 }

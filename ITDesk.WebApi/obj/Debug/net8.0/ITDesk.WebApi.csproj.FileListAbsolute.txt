@@ -30,3 +30,5 @@ C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDesk.WebApi\obj\Debug\net8.0\refint
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDesk.WebApi\obj\Debug\net8.0\ITDesk.WebApi.pdb
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDesk.WebApi\obj\Debug\net8.0\ITDesk.WebApi.genruntimeconfig.cache
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDesk.WebApi\obj\Debug\net8.0\ref\ITDesk.WebApi.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDesk.WebApi\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDesk.WebApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
