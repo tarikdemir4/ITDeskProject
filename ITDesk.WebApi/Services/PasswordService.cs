@@ -10,6 +10,7 @@ public static class PasswordService
         var hmac = new System.Security.Cryptography.HMACSHA512();
         salt = hmac.Key;
         hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+
     }
     public static bool CheckPassword(User user, string password)
     {
@@ -22,6 +23,7 @@ public static class PasswordService
                 return false;
             }
         }
+
         return true;
 
     }
