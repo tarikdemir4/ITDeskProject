@@ -11,11 +11,13 @@ export const routes: Routes = [
     {
         path: "",
         component: LayoutsComponent,
-        canActivateChild:[()=>inject(AuthService).checkAuthentication()],
+        canActivateChild: [() => inject(AuthService).checkAuthentication()],
         children: [
+
             {
                 path: "",
                 loadComponent: () => import("./components/home/home.component")
             }
+
         ]
     }];
