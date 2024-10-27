@@ -27,10 +27,17 @@ export class CreateComponent {
   constructor(private messageService: MessageService) { }
 
   onUpload(event: any) {
+    console.log(event);
+    
     for (let file of event.files) {
       this.uploadedFiles.push(file);
     }
 
     this.messageService.add({ severity: 'info', summary: 'File Uploaded', detail: '' });
+  }
+
+
+  create(){
+
   }
 }

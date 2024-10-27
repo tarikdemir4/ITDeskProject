@@ -2,10 +2,18 @@
     <input placeholder="Konu" pInputText id="username" [(ngModel)]="subject" style="width: 100%;" />
 </div>
 
-<div class="card flex justify-content-center">
+<div class="card" style="margin-top: 20px;">
+    <span class="p-float-label">
+        <textarea  id="float-input" rows="5" cols="30" pInputTextarea
+            style="width: 100%;"></textarea>
+            <label for="float-input">Summary</label>
+    </span>
+</div>
+
+<div class="card" style="margin-top: 20px;">
     <p-toast />
     <p-fileUpload name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" (onUpload)="onUpload($event)"
-        [multiple]="true" accept="image/*" maxFileSize="1000000" showUploadButton="false" chooseLabel="Dosya Seç"
+        [multiple]="true" accept="image/*" maxFileSize="1000000000" showUploadButton="true" chooseLabel="Dosya Seç"
         cancelLabel="Vazgeç">
         <ng-template pTemplate="content">
             <ul *ngIf="uploadedFiles.length">
@@ -17,13 +25,8 @@
     </p-fileUpload>
 </div>
 
-<div class="card">
-    <span>
-        <textarea placeholder="Summary" id="float-input" rows="5" cols="30" pInputTextarea
-            style="width: 100%;"></textarea>
-    </span>
-</div>
+
 
 <div class="card">
-<p-button [style]="{width: '100%'}" label="Oluştur" [raised]="true" severity="success"></p-button>
+<p-button (click)="create()" [style]="{width: '100%'}" label="Oluştur" [raised]="true" severity="success"></p-button>
 </div>
