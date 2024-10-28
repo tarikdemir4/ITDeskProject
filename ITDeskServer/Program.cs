@@ -2,6 +2,7 @@ using ITDeskServer.Context;
 using ITDeskServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +13,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 
-builder.Services.AddIdentityCore<AppUser>(options =>
+builder.Services.AddIdentity<AppUser,AppRole>(options =>
 {
     options.Password.RequiredLength = 6;
+    options.SignIn.RequireConfirmedEmail = true;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(15);
+    options.Lockout.MaxFailedAccessAttempts = 2;
+    options.Lockout.AllowedForNewUsers = true;
+
 }).AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllers();
@@ -28,6 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//app.UseAuthentication();
 
 app.UseHttpsRedirection();
 

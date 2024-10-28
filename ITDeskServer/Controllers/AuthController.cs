@@ -1,6 +1,5 @@
 ﻿using ITDeskServer.DTOs;
 using ITDeskServer.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +10,14 @@ public class AuthController : ControllerBase
 {
 
     private readonly UserManager<AppUser> _userManager;
+    private readonly SignInManager<AppUser> _signInManager;
 
-    public AuthController(UserManager<AppUser> userManager)
+
+
+    public AuthController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
     {
         _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     [HttpPost]
@@ -40,7 +43,7 @@ public class AuthController : ControllerBase
             }
             else
             {
-                 timeSpan = appUser.LastWrongTry.Date - DateTime.Now.Date;
+                timeSpan = appUser.LastWrongTry.Date - DateTime.Now.Date;
                 if (timeSpan.TotalDays < 0)
                 {
                     appUser.WrongTryCount = 0;
@@ -51,7 +54,7 @@ public class AuthController : ControllerBase
                     return BadRequest(new { ErrorMessage = $"Şirenizi yanlış girdiğinizzden dolayı kullanıcınız kitlendi. {Math.Ceiling(timeSpan.TotalMinutes)} dakika daha beklemelisiniz!" });
                 }
             }
-          
+
         }
 
         var checkPasswordIsCurrect = await _userManager.CheckPasswordAsync(appUser, request.Password);
@@ -74,7 +77,7 @@ public class AuthController : ControllerBase
 
             if (appUser.WrongTryCount == 3)
             {
-                appUser.LastWrongTry=DateTime.Now;
+                appUser.LastWrongTry = DateTime.Now;
                 appUser.LockDate = DateTime.Now.AddMinutes(15);
                 await _userManager.UpdateAsync(appUser);
                 return BadRequest(new { Message = "3 kere şifrenizi yanlış girdiniğiniz için kullanımınız 15 dakika kitlendi! 15 dakika sonra tekrar deneyebilirsiniz." });
@@ -83,6 +86,10 @@ public class AuthController : ControllerBase
         }
         appUser.WrongTryCount = 0;
         await _userManager.UpdateAsync(appUser);
+
+
+        var result = await _signInManager.CheckPasswordSignInAsync(appUser, request.Password, true);
+
         return Ok();
     }
 }
