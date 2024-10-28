@@ -53,7 +53,8 @@ using (var scoped = app.Services.CreateScope())
             Email = "test@test.com",
             UserName = "test",
             Name = "Tarýk",
-            LastName = "Demir"
+            LastName = "Demir",
+            EmailConfirmed = true
 
         }, "Password12*").Wait();
     }
