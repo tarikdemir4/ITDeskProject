@@ -41,7 +41,8 @@
             </a>
         </ng-template>
         <ng-template pTemplate="end">
-            <p-button label="Çıkş Yap" [text]="true" severity="secondary" icon="pi pi-fw pi-power-off" (click)="logout()" />
+            
+            <p-button [label]="auth.token.name" [text]="true" severity="secondary" icon="pi pi-fw pi-power-off" (click)="logout()" />
         </ng-template>
     </p-menubar>
 </div>

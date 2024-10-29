@@ -30,6 +30,10 @@
                 </ng-template>
             </p-password>
         </div>
+        <div class="mt-2 flex align-items-center gap1" >
+            <p-checkbox [(ngModel)]="rememberMe" [binary]="true" inputId="ny" />
+            <label for="ny">Beni Hatırla</label>
+        </div>
         <ng-template pTemplate="footer">
             <p-button (onClick)="signIn()" [style]="{width:'100%'}" label="Giriş Yap" icon="pi pi-user" />
         </ng-template>
