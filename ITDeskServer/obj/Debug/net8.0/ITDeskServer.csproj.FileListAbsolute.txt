@@ -171,3 +171,4 @@ C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\refint\
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\ITDeskServer.pdb
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\ITDeskServer.genruntimeconfig.cache
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\ref\ITDeskServer.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
