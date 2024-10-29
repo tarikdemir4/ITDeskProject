@@ -11,7 +11,13 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddCors(configure =>
+{
+    configure.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+    });
+});
 #region Dependency Injection
 
 builder.Services.AddScoped<JwtService>();
@@ -95,6 +101,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors();
 
 app.UseHttpsRedirection();
 

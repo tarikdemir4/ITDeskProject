@@ -50,7 +50,7 @@ public class AuthController(
         }
 
 
-        string token = jwtService.CreateToken(appUser, request.IsRememberMe);
+        string token = jwtService.CreateToken(appUser, request.RememberMe);
         return Ok(new { AccessToken = token });
 
     }
