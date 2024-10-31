@@ -17,6 +17,7 @@ builder.Services.AddCors(configure =>
     {
         policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
     });
+
 });
 #region Dependency Injection
 

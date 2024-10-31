@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 namespace ITDeskServer.Context;
 
@@ -10,6 +11,11 @@ public sealed class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, G
     public ApplicationDbContext(DbContextOptions options) : base(options)
     {
     }
+    public DbSet<Ticket> Tickets { get; set; }
+    public DbSet<TicketFile> TicketFiles { get; set; }
+    public DbSet<TicketDetail> TicketDetails { get; set; }
+
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
 
