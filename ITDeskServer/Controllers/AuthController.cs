@@ -13,10 +13,6 @@ public class AuthController(
     SignInManager<AppUser> signInManager,
     JwtService jwtService) : ControllerBase
 {
-
-
-
-
     [HttpPost]
     public async Task<IActionResult> Login(LoginDto request, CancellationToken cancellationToken)
     {
