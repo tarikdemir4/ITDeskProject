@@ -703,11 +703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDesk.WebApi\\ITDesk.WebApi.csproj",
+      "projectUniqueName": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\ITDesk.WebApi\\ITDesk.WebApi.csproj",
       "projectName": "ITDesk.WebApi",
-      "projectPath": "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDesk.WebApi\\ITDesk.WebApi.csproj",
+      "projectPath": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\ITDesk.WebApi\\ITDesk.WebApi.csproj",
       "packagesPath": "C:\\Users\\demir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDesk.WebApi\\obj\\",
+      "outputPath": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\ITDesk.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\demir\\AppData\\Roaming\\NuGet\\NuGet.Config",

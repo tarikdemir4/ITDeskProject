@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITDesk.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+654c9e3ef2ffe8c7d7733dc9de0fd1f257fba86f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITDesk.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITDesk.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
