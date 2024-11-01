@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(configure =>
 {
+
     configure.AddDefaultPolicy(policy =>
     {
         policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
