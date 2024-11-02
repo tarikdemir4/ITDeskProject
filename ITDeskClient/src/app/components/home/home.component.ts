@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { TableModule } from 'primeng/table'
 import { TagModule } from 'primeng/tag';
@@ -9,15 +9,22 @@ import { DialogService, DynamicDialogModule, DynamicDialogRef } from 'primeng/dy
 import { MessageService } from 'primeng/api';
 import { CreateComponent } from '../create/create.component';
 import { DialogModule } from 'primeng/dialog';
+import { TicketModel } from '../../models/ticket.model';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
+import { ErrorService } from '../../services/error.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, BreadcrumbModule, TableModule, TagModule, InputTextModule, ButtonModule, DynamicDialogModule,DialogModule],
-  providers:[DialogService,MessageService],
+  imports: [CommonModule, BreadcrumbModule, TableModule, TagModule, InputTextModule, ButtonModule, DynamicDialogModule, DialogModule],
+  providers: [DialogService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export default class HomeComponent {
+export default class HomeComponent implements OnInit {
+  tickets: TicketModel[] = [];
+  ref: DynamicDialogRef | undefined;
+
   customers: any[] = [
     {
       "id": 1000,
@@ -146,57 +153,64 @@ export default class HomeComponent {
       "balance": 88521
     }
   ];
-
   selectedCustomers!: any;
 
+  constructor(
 
-  ngOnInit() {
+    public dialogService: DialogService,
+    public messageService: MessageService,
+    private error: ErrorService,
+    private http: HttpClient,
+    private auth: AuthService) { }
 
+
+  ngOnInit(): void {
+    this.getAll();
   }
 
-  getSeverity(status: string) {
-    switch (status) {
-      case 'unqualified':
-        return 'danger';
-
-      case 'qualified':
-        return 'success';
-
-      case 'new':
-        return 'info';
-
-      case 'negotiation':
-        return 'warning';
-
-      case 'renewal':
-        return 'danger';
-      default:
-        return 'danger'
-    }
+  getAll() {
+    this.http.get("https://localhost:7292/api/Tickets/GetAll", {
+      headers: {
+        "Authorization": "Bearer " + this.auth.tokenString
+      }
+    })
+      .subscribe({
+        next: (res: any) => {
+          this.tickets = res
+        },
+        error: (err: HttpErrorResponse) => {
+          this.error.errorHandler(err);
+        }
+      })
   }
-
-  constructor(public dialogService: DialogService, public messageService: MessageService) { }
-
-  ref: DynamicDialogRef | undefined;
 
   show() {
     this.ref = this.dialogService.open(CreateComponent, {
       header: 'Yeni Destek Oluştur',
       width: '30%',
       contentStyle: { overflow: 'auto' },
-      baseZIndex:10000,
-      maximizable:false
+      baseZIndex: 10000,
+      maximizable: false
     });
 
     this.ref.onClose.subscribe((data: any) => {
-      let summary_and_detail;
       if (data) {
-        const buttonType = data?.buttonType;
-        summary_and_detail = buttonType ? { summary: 'No Product Selected', detail: `Pressed '${buttonType}' button` } : { summary: 'Product Selected', detail: data };
-      } else {
-        summary_and_detail = { summary: 'No Product Selected', detail: 'Pressed Close button' };
+        this.http.post("https://localhost:7292/api/Tickets/Add", data, {
+          headers: {
+            "Authorization": "Bearer " + this.auth.tokenString
+          }
+        })
+          .subscribe({
+            next: (res: any) => {
+              this.getAll();
+              this.messageService.add({ severity: 'success', summary: 'Destek Talebi başarıyla açıldı.', detail: '' });
+            },
+            error: (err: HttpErrorResponse) => {
+              this.error.errorHandler(err);
+              ;
+            }
+          })
       }
-      this.messageService.add({ severity: 'info', ...summary_and_detail, life: 3000 });
     });
 
     this.ref.onMaximize.subscribe((value) => {

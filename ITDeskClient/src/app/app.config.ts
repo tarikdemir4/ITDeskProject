@@ -3,7 +3,8 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { provideHttpClient } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideHttpClient(),provideRouter(routes),importProvidersFrom([BrowserAnimationsModule])]
+  providers: [provideHttpClient(),provideRouter(routes),importProvidersFrom([BrowserAnimationsModule]),MessageService]
 };

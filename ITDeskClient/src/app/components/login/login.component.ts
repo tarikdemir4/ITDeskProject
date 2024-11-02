@@ -12,12 +12,13 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { CheckboxModule } from 'primeng/checkbox';
+import { ErrorService } from '../../services/error.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, CardModule, ButtonModule, InputTextModule, PasswordModule, FormsModule, DividerModule, ToastModule, ToggleButtonModule, CheckboxModule],
-  providers: [MessageService],
+  providers: [],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -29,6 +30,7 @@ export default class LoginComponent {
   constructor(
     private message: MessageService,
     private http: HttpClient,
+    private error: ErrorService,
     private router: Router) { }
 
   signIn() {
@@ -50,21 +52,7 @@ export default class LoginComponent {
 
         },
         error: (err: HttpErrorResponse) => {
-          console.log(err);
-          switch (err.status) {
-            case 400:
-              this.message.add({ severity: 'error', summary: "Validation Hatası", detail: err.error.message })
-              break
-
-            case 422:
-              for (let e of err.error) {
-                this.message.add({ severity: 'error', summary: "Validation Hatası", detail: e })
-              }
-              break;
-            case 0:
-              this.message.add({ severity: 'error', summary: "Validation Hatası", detail: "API adresine ulaşılamıyor!Lütfen daha sonra tekrar deneyiniz!" })
-              break;
-          }
+          this.error.errorHandler(err);
         }
       })
   }

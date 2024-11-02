@@ -10,7 +10,7 @@ import { Token } from '@angular/compiler';
 export class AuthService {
 
   token: TokenModel = new TokenModel();
-
+  tokenString: string = "";
   constructor(private router: Router) { }
 
   checkAuthentication() {
@@ -19,10 +19,10 @@ export class AuthService {
       const responsJson = JSON.parse(responseString);
 
       if (responsJson != null) {
-        const token = responsJson?.accessToken;
+        this.tokenString = responsJson?.accessToken;
 
-        if (token != null) {
-          const decode: any = jwtDecode(token);
+        if (this.tokenString != null) {
+          const decode: any = jwtDecode(this.tokenString);
           console.log(decode);
           this.token.email = decode?.Email;
           this.token.name = decode?.Name;
