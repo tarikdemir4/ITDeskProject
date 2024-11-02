@@ -8,5 +8,5 @@ public sealed class Ticket
     public string Subject { get; set; } = string.Empty;
     public DateTime CreatedDate { get; set; }
     public bool IsOpen { get; set; }
-    public List<TicketFile> FileUrls { get; set; } = new();
+    public List<TicketFile>? FileUrls { get; set; } 
 }

@@ -2,4 +2,5 @@
 
 public sealed record TicketAddDto(
    string Subject,
+   string Summary,
    List<IFormFile>? Files);

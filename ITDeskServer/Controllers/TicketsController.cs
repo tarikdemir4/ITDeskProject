@@ -35,6 +35,7 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
         };
         if (request.Files is not null)
         {
+            ticket.FileUrls = new();
             foreach (var file in request.Files)
             {
                 string fileFormat = file.FileName.Substring(file.FileName.LastIndexOf('.'));
@@ -50,10 +51,22 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
                     TicketId = ticket.Id,
                     FileUrl = fileName
                 };
+
                 ticket.FileUrls.Add(ticketFile);
             }
         }
+
+        TicketDetail ticketDetail = new()
+        {
+            Id = Guid.NewGuid(),
+            TicketId = ticket.Id,
+            Content = request.Summary,
+            CreatedDate = ticket.CreatedDate
+        };
+
+
         context.Add(ticket);
+        context.Add(ticketDetail);
         context.SaveChanges();
 
         return NoContent();
@@ -71,6 +84,7 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
 
         List<TicketResponseDto> tickets =
             context.Tickets
+            .Where(p => p.AppUserId == Guid.Parse(userId))
             .Select(s => new TicketResponseDto(s.Id, s.Subject, s.CreatedDate, s.IsOpen))
             .ToList();
 

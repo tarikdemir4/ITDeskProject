@@ -4,6 +4,7 @@ using ITDeskServer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITDeskServer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241102154607_mg2")]
+    partial class mg2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -155,6 +158,8 @@ namespace ITDeskServer.Migrations
 
                     b.HasIndex("AppUserId");
 
+                    b.HasIndex("TicketId");
+
                     b.ToTable("TicketDetails");
                 });
 
@@ -195,6 +200,12 @@ namespace ITDeskServer.Migrations
                         .WithMany()
                         .HasForeignKey("AppUserId");
 
+                    b.HasOne("ITDeskServer.Models.Ticket", null)
+                        .WithMany("TicketDetails")
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("AppUser");
                 });
 
@@ -210,6 +221,8 @@ namespace ITDeskServer.Migrations
             modelBuilder.Entity("ITDeskServer.Models.Ticket", b =>
                 {
                     b.Navigation("FileUrls");
+
+                    b.Navigation("TicketDetails");
                 });
 #pragma warning restore 612, 618
         }
