@@ -3,8 +3,8 @@
 public sealed class Ticket
 {
     public Guid Id { get; set; }
-    public Guid UserId { get; set; }
-    public AppUser AppUser { get; set; } = new();
+    public Guid AppUserId { get; set; }
+    public AppUser? AppUser { get; set; } 
     public string Subject { get; set; } = string.Empty;
     public DateTime CreatedDate { get; set; }
     public bool IsOpen { get; set; }

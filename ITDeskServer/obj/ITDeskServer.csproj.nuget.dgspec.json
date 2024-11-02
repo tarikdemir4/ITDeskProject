@@ -71,6 +71,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "TS.FileService": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [

@@ -173,3 +173,4 @@ C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\ITDeskS
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\ref\ITDeskServer.dll
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\TS.FileService.dll
