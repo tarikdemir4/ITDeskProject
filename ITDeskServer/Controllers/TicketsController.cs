@@ -65,8 +65,6 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
         };
 
 
-
-
         context.Add(ticket);
         context.Add(ticketDetail);
         context.SaveChanges();
