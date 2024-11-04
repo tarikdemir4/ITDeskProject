@@ -64,7 +64,6 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
             CreatedDate = ticket.CreatedDate
         };
 
-
         context.Add(ticket);
         context.Add(ticketDetail);
         context.SaveChanges();
