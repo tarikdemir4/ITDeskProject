@@ -35,6 +35,7 @@ public class AuthController(
             {
                 return BadRequest(new { Message = "Kullanıcı bulunamadı!" });
             }
+
         }
 
 
