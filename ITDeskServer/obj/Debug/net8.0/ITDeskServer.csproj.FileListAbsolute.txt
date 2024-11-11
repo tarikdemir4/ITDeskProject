@@ -174,3 +174,8 @@ C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\obj\Debug\net8.0\ref\ITD
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\TS.FileService.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.AspNetCore.OData.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.OData.Core.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.OData.Edm.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.OData.ModelBuilder.dll
+C:\Users\demir\Desktop\YeniProjeler\ITDesk\ITDeskServer\bin\Debug\net8.0\Microsoft.Spatial.dll

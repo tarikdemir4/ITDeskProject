@@ -4,6 +4,7 @@ using ITDeskServer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 
 namespace ITDeskServer.Controllers;
@@ -73,6 +74,7 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
     }
 
     [HttpGet]
+    [EnableQuery]
     public IActionResult GetAll()
     {
         string? userId = HttpContext.User.Claims.Where(p => p.Type == "UserId").Select(p => p.Value).FirstOrDefault();
@@ -81,11 +83,11 @@ public class TicketsController(ApplicationDbContext context) : ControllerBase
             return BadRequest("Kullanıcı bulunamadı");
         }
 
-        List<TicketResponseDto> tickets =
+        IQueryable<TicketResponseDto> tickets =
             context.Tickets
             .Where(p => p.AppUserId == Guid.Parse(userId))
             .Select(s => new TicketResponseDto(s.Id, s.Subject, s.CreatedDate, s.IsOpen))
-            .ToList();
+            .AsQueryable();
 
         return Ok(tickets);
     }
