@@ -8,7 +8,7 @@ export const routes: Routes = [
         path: "login",
         loadComponent: () => import("./components/login/login.component")
     },
-    
+
     {
         path: "",
         component: LayoutsComponent,
@@ -18,7 +18,12 @@ export const routes: Routes = [
             {
                 path: "",
                 loadComponent: () => import("./components/home/home.component")
-            }
+            },
+            {
+                path:   "ticket-details/:value",
+                loadComponent:()=>import("./components/detail/detail.component")
+                }
+
 
         ]
     }];

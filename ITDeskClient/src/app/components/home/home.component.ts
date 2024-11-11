@@ -13,10 +13,14 @@ import { TicketModel } from '../../models/ticket.model';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 import { ErrorService } from '../../services/error.service';
+import { AgGridModule } from 'ag-grid-angular';
+import { BadgeModule } from 'primeng/badge'
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, BreadcrumbModule, TableModule, TagModule, InputTextModule, ButtonModule, DynamicDialogModule, DialogModule],
+  imports: [CommonModule, BreadcrumbModule, TableModule, TagModule, InputTextModule, ButtonModule, DynamicDialogModule, DialogModule, AgGridModule, BadgeModule],
   providers: [DialogService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -154,6 +158,42 @@ export default class HomeComponent implements OnInit {
     }
   ];
   selectedCustomers!: any;
+
+
+
+  defaultColDef: any = {
+    filter: true,
+    floatingFilter: true,
+    resizable: true
+  }
+  autoSizeStrategy: any = {
+    type: 'fitGridWidth',
+    defaultWidth: 100
+  }
+  colDefs: any[] = [
+    { headerName: "#", valueGetter: (params: any) => params.node.rowIndex + 1, width: 30, filter: false },
+    {
+      field: "subject",
+      cellRenderer: (params: any) => {
+        return `<a href="/ticket-details/${params.data.id}">${params.value}</a>`
+      }
+    },
+    {
+      field: "createdDate", valueFormatter: (params: any) => {
+        return new Date(params.value).toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+      },
+    },
+    {
+      field: "isOpen", cellRenderer: (params: any) => {
+        if (params.value) {
+          return `<span class="p-badge p-component p-badge-lg p-badge-success">Açık</span>`;
+        } else {
+          return
+          `<span class="p-badge p-component p-badge-lg p-badge-danger">Açık</span>`;
+        }
+      }
+    }
+  ]
 
   constructor(
 
