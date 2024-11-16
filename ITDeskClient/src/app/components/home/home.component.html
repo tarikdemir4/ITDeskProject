@@ -2,7 +2,16 @@
     <p-button (onClick)="show()" label="Yeni Destek Talebi" icon="pi pi-plus"></p-button>
 </div>
 <div class="card mt-2">
-    <ag-grid-angular class="ag-theme-quartz" style="width: 100%; height: 750px;" [rowData]="tickets"
-        [columnDefs]="colDefs" [defaultColDef]="defaultColDef" [autoSizeStrategy]="autoSizeStrategy" [pagination]="true" [paginationPageSize]="20">
+    <ag-grid-angular 
+    class="ag-theme-quartz"
+     style="width: 100%; height: 750px;"
+      [rowData]="tickets"
+        [columnDefs]="colDefs" 
+        [defaultColDef]="defaultColDef" 
+        [autoSizeStrategy]="autoSizeStrategy" 
+        [pagination]="true" 
+        [paginationPageSize]="20"
+        [components]="frameworkComponents"
+        >
     </ag-grid-angular>
 </div>

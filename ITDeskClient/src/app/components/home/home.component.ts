@@ -15,6 +15,8 @@ import { AuthService } from '../../services/auth.service';
 import { ErrorService } from '../../services/error.service';
 import { AgGridModule } from 'ag-grid-angular';
 import { BadgeModule } from 'primeng/badge'
+import { ButtonRendererComponent } from '../common/components/button.renderer.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -28,6 +30,7 @@ import { BadgeModule } from 'primeng/badge'
 export default class HomeComponent implements OnInit {
   tickets: TicketModel[] = [];
   ref: DynamicDialogRef | undefined;
+  frameworkComponents: any;
 
   customers: any[] = [
     {
@@ -171,12 +174,16 @@ export default class HomeComponent implements OnInit {
     defaultWidth: 100
   }
   colDefs: any[] = [
-    { headerName: "#", valueGetter: (params: any) => params.node.rowIndex + 1, width: 30, filter: false },
     {
-      field: "subject",
-      cellRenderer: (params: any) => {
-        return `<a href="/ticket-details/${params.data.id}">${params.value}</a>`
+      headerName: "Detay",
+      cellRenderer: "buttonRenderer",
+      cellRendererParams: {
+        onClick: this.goToDetail.bind(this),
+        label: "Goto Detail"
       }
+    },
+    {
+      field: "subject"
     },
     {
       field: "createdDate", valueFormatter: (params: any) => {
@@ -201,11 +208,18 @@ export default class HomeComponent implements OnInit {
     public messageService: MessageService,
     private error: ErrorService,
     private http: HttpClient,
-    private auth: AuthService) { }
+    private auth: AuthService,
+    private router: Router) { this.frameworkComponents = { buttonRenderer: ButtonRendererComponent } }
 
 
   ngOnInit(): void {
     this.getAll();
+  }
+
+  goToDetail(event: any) {
+    const id = event.rowData.id;
+    this.router.navigateByUrl("ticket-details/" + id)
+
   }
 
   getAll() {
