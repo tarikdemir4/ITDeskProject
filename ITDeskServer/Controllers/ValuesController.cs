@@ -1,18 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using ITDeskServer.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITDeskServer.Controllers;
-[Route("api/[controller]/[action]")]
-[ApiController]
-[Authorize(AuthenticationSchemes ="Bearer")]
-public sealed class ValuesController : ControllerBase
+
+
+public sealed class ValuesController : ApiController
 {
-
-    [HttpGet]   
-
+    [HttpGet]    
     public IActionResult Get()
     {
-        return Ok(new { Message = "Api çalışıyor" });
+        return Ok(new { Message = "Api çalışıyor!" });
     }
 }

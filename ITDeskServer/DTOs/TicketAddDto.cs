@@ -1,6 +1,6 @@
 ﻿namespace ITDeskServer.DTOs;
 
 public sealed record TicketAddDto(
-   string Subject,
-   string Summary,
-   List<IFormFile>? Files);
+    string Subject,
+    string Summary,
+    List<IFormFile>? Files);

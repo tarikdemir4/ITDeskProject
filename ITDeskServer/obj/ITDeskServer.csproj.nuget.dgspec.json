@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDeskServer\\ITDeskServer.csproj": {}
+    "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDeskServer\\ITDeskServer.csproj": {
+    "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+        "projectUniqueName": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
         "projectName": "ITDeskServer",
-        "projectPath": "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+        "projectPath": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
         "packagesPath": "C:\\Users\\demir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\demir\\Desktop\\YeniProjeler\\ITDesk\\ITDeskServer\\obj\\",
+        "outputPath": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\demir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -32,6 +32,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -48,37 +49,37 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.10.0, )"
+              "version": "[11.8.1, )"
+            },
+            "GenericFileService": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.AspNetCore.OData": {
               "target": "Package",
-              "version": "[8.0.12, )"
+              "version": "[8.2.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
-            },
-            "TS.FileService": {
-              "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

@@ -1,45 +1,45 @@
 using ITDeskServer.Context;
+using ITDeskServer.Middleware;
 using ITDeskServer.Models;
 using ITDeskServer.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddCors(configure =>
 {
-
     configure.AddDefaultPolicy(policy =>
     {
-        policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+        policy
+            .AllowAnyHeader() //contentType => application/json application/text mime type
+            .AllowAnyOrigin() //www.taner.com www.ahmet.com
+            .AllowAnyMethod(); //httpget httppost httput
     });
-
 });
-#region Dependency Injection
 
-builder.Services.AddScoped<JwtService>();
+#region Dependency Injection
+builder.Services.TryAddScoped<JwtService>();
 #endregion
 
 #region Authentication
-
-builder.Services.AddAuthentication().AddJwtBearer(opt =>
+builder.Services.AddAuthentication().AddJwtBearer(options =>
 {
-    opt.TokenValidationParameters = new()
+    options.TokenValidationParameters = new()
     {
-        ValidateIssuer = true, //tokeni gönderen kýsý
-        ValidateAudience = true, //tokený kullanacak sýte yzda kýsý býlgýsý
-        ValidateIssuerSigningKey = true, //tokenýn guvenlýk anahtarý uretmesýný saglayan guvenlýk sozcugu
-        ValidateLifetime = true, // tokenýn yasam suresýný kontrol etmek
-        ValidIssuer = "Tarýk Demir",
+        ValidateIssuer = true, //tokený gönderen kiþi bilgisi
+        ValidateAudience = true, //tokený kullanacak site ya da kiþi bilgisi
+        ValidateIssuerSigningKey = true, //tokenýn güvenlik anahtarý üretmesini saðlayan güvenlik sözcüðü
+        ValidateLifetime = true, //tokenun yaþam süresini kontrol etmek istiyor musunuz
+        ValidIssuer = "Taner Saydam",
         ValidAudience = "IT Desk Angular App",
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("my secret key my secret key my secret key 1234 ... my secret key my secret key my secret key 1234 ... my secret key my secret key my secret key 1234 ..."))
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("my secret key my secret key my secret key 1234 ... my secret key my secret key my secret key 1234 ..."))
     };
 });
 #endregion
@@ -47,25 +47,23 @@ builder.Services.AddAuthentication().AddJwtBearer(opt =>
 #region DbContext ve Identity
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer("Data Source=TARDEMPC\\SQLEXPRESS;Initial Catalog=ITDeskDb;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+    options.UseSqlServer("Data Source=TARDEMPC\\SQLEXPRESS;Initial Catalog=ITDeskDb2;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
 });
-
-
-builder.Services.AddIdentity<AppUser, AppRole>(options =>
+builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 {
-    options.Password.RequiredLength = 6;
-    options.SignIn.RequireConfirmedEmail = true;
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(15);
-    options.Lockout.MaxFailedAccessAttempts = 2;
-    options.Lockout.AllowedForNewUsers = true;
+    opt.Password.RequiredLength = 6;
+    opt.SignIn.RequireConfirmedEmail = true;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    opt.Lockout.MaxFailedAccessAttempts = 2;
+    opt.Lockout.AllowedForNewUsers = true;
 
 })
-     .AddEntityFrameworkStores<ApplicationDbContext>()
-     .AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 #endregion
 
 #region Presentation
-builder.Services.AddControllers().AddOData(options => options.EnableQueryFeatures());
+builder.Services.AddControllers().AddOData(options=> options.EnableQueryFeatures());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(setup =>
 {
@@ -95,9 +93,7 @@ builder.Services.AddSwaggerGen(setup =>
 
 #endregion
 
-#region MiddleWares
-
-
+#region Middlewares
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -105,6 +101,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseCors();
 
 app.UseHttpsRedirection();
@@ -113,23 +110,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-using (var scoped = app.Services.CreateScope())
-{
-    var userManager = scoped.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-    if (!userManager.Users.Any())
-    {
-        userManager.CreateAsync(new()
-        {
-            Email = "test@test.com",
-            UserName = "test",
-            FirstName = "Tarýk",
-            LastName = "Demir",
-            EmailConfirmed = true
-
-        }, "Password12*").Wait();
-    }
-}
+ExtensionsMiddleware.AutoMigration(app);
+ExtensionsMiddleware.CreateFirstUser(app);
+ExtensionsMiddleware.CreateRoles(app);
+ExtensionsMiddleware.CreateUserRole(app);
 
 app.Run();
-
 #endregion
+

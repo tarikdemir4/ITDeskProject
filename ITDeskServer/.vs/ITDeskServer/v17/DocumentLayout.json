@@ -1,48 +1,75 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\",
+  "WorkspaceRootPath": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\middleware\\extensionsmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:middleware\\extensionsmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\migrations\\20240712194429_mg1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:migrations\\20240712194429_mg1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\demir\\Downloads\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194222_mg1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\models\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:models\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|c:\\github\\itdeskproject\\itdeskserver\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EDC5DE3-01E9-4C94-89A8-456875B7397E}|ITDeskServer.csproj|solutionrelative:context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\validators\\loginvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:validators\\loginvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\itdeskserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:itdeskserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|c:\\users\\demir\\desktop\\ymyp1-main\\06.webapi\\itdesk\\itdeskserver\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E549EDF9-6D95-4717-A55D-684608D1D986}|ITDeskServer.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 855,
-          "SelectedChildIndex": 10,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,105 +101,193 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\DTOs\\LoginDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\LoginDto.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\DTOs\\LoginDto.cs",
-              "RelativeToolTip": "DTOs\\LoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:01:57.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "Services\\JwtService.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Services\\JwtService.cs",
-              "RelativeToolTip": "Services\\JwtService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T13:08:48.714Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ValuesController.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Controllers\\ValuesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ValuesController.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Controllers\\ValuesController.cs",
-              "RelativeToolTip": "Controllers\\ValuesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T12:53:49.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAnwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T18:18:30.663Z",
+              "Title": ".editorconfig",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\.editorconfig",
+              "RelativeDocumentMoniker": ".editorconfig",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\.editorconfig",
+              "RelativeToolTip": ".editorconfig",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-17T17:04:15.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppRole.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Models\\AppRole.cs",
-              "RelativeDocumentMoniker": "Models\\AppRole.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Models\\AppRole.cs",
-              "RelativeToolTip": "Models\\AppRole.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
+              "DocumentIndex": 4,
+              "Title": "20240712194429_mg1.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194429_mg1.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240712194429_mg1.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194429_mg1.cs",
+              "RelativeToolTip": "Migrations\\20240712194429_mg1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T15:38:54.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Context\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Context\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Context\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Context\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T15:26:15.182Z"
+              "WhenOpened": "2024-07-12T19:44:29.712Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "Models\\AppUser.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Models\\AppUser.cs",
-              "RelativeToolTip": "Models\\AppUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Title": "20240712194222_mg1.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Downloads\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194222_mg1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194222_mg1.cs",
+              "ToolTip": "C:\\Users\\demir\\Downloads\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194222_mg1.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Migrations\\20240712194222_mg1.cs",
+              "ViewState": "AQIAAJcAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T15:21:52.755Z"
+              "WhenOpened": "2024-07-12T19:42:22.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "Controllers\\ValuesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:41:35.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:41:34.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExtensionsMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Middleware\\ExtensionsMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\ExtensionsMiddleware.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Middleware\\ExtensionsMiddleware.cs",
+              "RelativeToolTip": "Middleware\\ExtensionsMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:41:28.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Services\\JwtService.cs",
+              "RelativeToolTip": "Services\\JwtService.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:41:18.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginValidator.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Validators\\LoginValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\LoginValidator.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Validators\\LoginValidator.cs",
+              "RelativeToolTip": "Validators\\LoginValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:41:15.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Models\\Ticket.cs",
+              "RelativeToolTip": "Models\\Ticket.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:40:33.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "Controllers\\TicketsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:40:33.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-12T19:40:33.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\Program.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAHAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADsAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T14:27:14.069Z"
+              "WhenOpened": "2024-07-12T19:40:33.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITDeskServer.csproj",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+              "RelativeDocumentMoniker": "ITDeskServer.csproj",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+              "RelativeToolTip": "ITDeskServer.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-12T19:40:33.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-12T19:40:33.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T19:40:33.702Z"
             }
           ]
         },
         {
-          "DockedHeight": 500,
+          "DockedWidth": 1871,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -190,7 +305,7 @@
           ]
         },
         {
-          "DockedHeight": 134,
+          "DockedWidth": 2548,
           "SelectedChildIndex": -1,
           "Children": [
             {

@@ -2,6 +2,6 @@
 
 namespace ITDeskServer.Models;
 
-public sealed class AppRole:IdentityRole<Guid>
+public sealed class AppRole : IdentityRole<Guid>
 {
 }
