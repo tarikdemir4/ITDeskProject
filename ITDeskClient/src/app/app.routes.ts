@@ -6,24 +6,21 @@ import { AuthService } from './services/auth.service';
 export const routes: Routes = [
     {
         path: "login",
-        loadComponent: () => import("./components/login/login.component")
+        loadComponent:()=> import("./components/login/login.component")
     },
-
     {
         path: "",
         component: LayoutsComponent,
-        canActivateChild: [() => inject(AuthService).checkAuthentication()],
+        canActivateChild: [()=> inject(AuthService).checkAuthentication()],
         children: [
-
             {
                 path: "",
-                loadComponent: () => import("./components/home/home.component")
+                loadComponent: ()=> import("./components/home/home.component")
             },
             {
-                path:   "ticket-details/:value",
-                loadComponent:()=>import("./components/detail/detail.component")
-                }
-
-
+                path: "ticket-details/:value",
+                loadComponent: ()=> import("./components/detail/detail.component")
+            }
         ]
-    }];
+    }
+];

@@ -1,59 +1,67 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { FormsModule } from '@angular/forms';
-import { DividerModule } from 'primeng/divider'
+import { DividerModule } from 'primeng/divider';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { ToggleButtonModule } from 'primeng/togglebutton';
+import { LoginModel } from '../../models/login.model';
 import { CheckboxModule } from 'primeng/checkbox';
+import { GoogleSigninButtonModule, SocialAuthService } from '@abacritt/angularx-social-login';
 import { ErrorService } from '../../services/error.service';
+import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, CardModule, ButtonModule, InputTextModule, PasswordModule, FormsModule, DividerModule, ToastModule, ToggleButtonModule, CheckboxModule],
-  providers: [],
+  imports: [
+    CommonModule,
+    CardModule,
+    ButtonModule,
+    InputTextModule,
+    PasswordModule,
+    FormsModule,
+    DividerModule,
+    ToastModule,
+    CheckboxModule,
+    GoogleSigninButtonModule
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export default class LoginComponent {
-  userNameOrEmail: string = "";
-  password: string = "";
-  rememberMe: boolean = false;
+export default class LoginComponent implements OnInit {
+  request: LoginModel = new LoginModel();
 
   constructor(
     private message: MessageService,
-    private http: HttpClient,
+    private http: HttpService,
+    private router: Router,
     private error: ErrorService,
-    private router: Router) { }
+    private auth: SocialAuthService) { }
+
+  ngOnInit(): void {
+    this.auth.authState.subscribe(res => {
+      this.http.post("Auth/GoogleLogin", res, (data) => {
+        localStorage.setItem("response", JSON.stringify(data));
+        this.router.navigateByUrl("/");
+      })
+    })
+  }
 
   signIn() {
-    if (this.userNameOrEmail.length < 3) {
-      this.message.add({ severity: 'warn', summary: 'Validasyon Hatası', detail: 'Geçerli bir kullanıcı adı ya da mail adresi giriniz.' })
+    if (this.request.userNameOrEmail.length < 3) {
+      this.message.add({ severity: 'warn', summary: 'Validasyon Hatası!', detail: 'Geçerli bir kullanıcı adı ya da mail adresi girin' });
       return;
     }
 
-    if (this.password.length < 6) {
-      this.message.add({ severity: 'warn', summary: 'Validasyon Hatası', detail: 'Şifreniz en az 6 karakter olmalıdır.' })
-      return;
-    }
-
-    this.http.post("https://localhost:7292/api/Auth/Login", { userNameOrEmail: this.userNameOrEmail, password: this.password, rememberMe: this.rememberMe })
-      .subscribe({
-        next: res => {
-          localStorage.setItem("response", JSON.stringify(res));
-          this.router.navigateByUrl("/");
-
-        },
-        error: (err: HttpErrorResponse) => {
-          this.error.errorHandler(err);
-        }
-      })
+    this.http.post("Auth/Login", this.request, res=> {
+      localStorage.setItem("response", JSON.stringify(res));
+      this.router.navigateByUrl("/");
+    });
   }
 }
