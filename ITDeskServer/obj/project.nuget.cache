@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t/PbbriyqpA=",
+  "dgSpecHash": "XAWW8o+on+I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+  "projectFilePath": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\ITDeskServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\demir\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\demir\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

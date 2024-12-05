@@ -4731,11 +4731,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+      "projectUniqueName": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\ITDeskServer.csproj",
       "projectName": "ITDeskServer",
-      "projectPath": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\ITDeskServer.csproj",
+      "projectPath": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\ITDeskServer.csproj",
       "packagesPath": "C:\\Users\\demir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\demir\\Desktop\\YMYP1-main\\06.WebApi\\ITDesk\\ITDeskServer\\obj\\",
+      "outputPath": "C:\\GitHub\\ITDeskProject\\ITDeskServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\demir\\AppData\\Roaming\\NuGet\\NuGet.Config",
